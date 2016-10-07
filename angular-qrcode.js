@@ -100,10 +100,7 @@ angular.module('monospaced.qrcode', [])
               }
 
               if (download) {
-                if(!downloadFileName){
-                    downloadFileName = 'qrcode';
-                }
-                domElement.download = downloadFileName + '.png';
+                domElement.download = (downloadFileName || 'qrcode') + '.png';
                 domElement.title = 'Download QR code';
               }
 
