@@ -189,6 +189,15 @@ angular.module('monospaced.qrcode', [])
           href = value;
           render();
         });
+		
+		attrs.$observe('downloadFileName', function(value) {
+			if (!value) {
+            return;
+          }
+		  
+		  downloadFileName = value;
+          render();
+        });
       }
     };
   }]);
